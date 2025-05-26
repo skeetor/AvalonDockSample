@@ -145,7 +145,6 @@
         <DockingManager
             Grid.Row="1"
 			AutoHideDelay="0"
-		    ActiveContent="{Binding ActiveDocument, Mode=TwoWay, Converter={StaticResource ActiveDocumentConverter}}"
 		    AnchorablesSource="{Binding Tools}"
 		    DocumentsSource="{Binding Files}"
 			Theme="{Binding SelectedTheme.Item2}">
