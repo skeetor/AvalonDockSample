@@ -1,61 +1,24 @@
-﻿using AvalonDockSample.ViewModels;
-using System;
+﻿using System.Text;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
 namespace AvalonDockSample
 {
-	/// <summary>
-	/// Interaction logic for MainWindow.xaml
-	/// </summary>
-	public partial class MainWindow : Window
-	{
-		public MainWindow()
-		{
-			InitializeComponent();
-			DataContext = Workspace.This;
-		}
-
-		private void MinimizeClick(object sender, RoutedEventArgs e)
-		{
-			WindowState = WindowState.Minimized;
-		}
-
-		private void MaximizeClick(object sender, RoutedEventArgs e)
-		{
-			WindowState = WindowState.Maximized;
-		}
-
-		private void RestoreDownClick(object sender, RoutedEventArgs e)
-		{
-			WindowState = WindowState.Normal;
-		}
-
-		private void CloseClick(object sender, RoutedEventArgs e)
-		{
-			Close();
-		}
-
-		private void WindowStateChanged(object sender, EventArgs e)
-		{
-			SetCaptionHeight();
-		}
-
-		private void HeaderSizeChanged(object sender, SizeChangedEventArgs e)
-		{
-			SetCaptionHeight();
-		}
-
-		private void SetCaptionHeight()
-		{
-			switch (WindowState)
-			{
-				case WindowState.Normal:
-					chrome.CaptionHeight = header.ActualHeight + BorderThickness.Top - chrome.ResizeBorderThickness.Top;
-					break;
-				case WindowState.Maximized:
-					chrome.CaptionHeight = header.ActualHeight - BorderThickness.Top;
-					break;
-			}
-		}
-	}
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+    }
 }
